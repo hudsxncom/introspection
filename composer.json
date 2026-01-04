@@ -1,0 +1,21 @@
+{
+    "name": "hudsxn/introspection",
+    "description": "Rapid Reflection utility with extra ergonomic functions",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Hudsxn\\Introspection\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "hudsxn"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "scripts": {
+        "test": "vendor\\bin\\phpunit --log-junit build\\phpunit.xml && cd tools && php junit-to-md.php"
+    }
+}
