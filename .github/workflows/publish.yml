@@ -35,7 +35,7 @@ jobs:
         env:
           PACKAGIST_USERNAME: ${{ secrets.PACKAGIST_USERNAME }}
           PACKAGIST_API_TOKEN: ${{ secrets.PACKAGIST_API_TOKEN }}
-          REPO_URL: https://github.com/${GITHUB_REPOSITORY}
+          REPO_URL: https://github.com/${{ github.repository }}
         run: |
           curl -X POST \
             -H "Content-Type: application/json" \
@@ -44,4 +44,4 @@ jobs:
 
       # 6. Optional: Tag confirmation
       - name: Confirm published version
-        run: echo "Published tag $GITHUB_REF to Packagist"
+        run: echo "Published tag ${{ github.ref }} to Packagist"
