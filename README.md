@@ -102,24 +102,6 @@ $introspector->clearCache();
 
 ---
 
-## Example: Deep Comparison
-
-```php
-use Hudsxn\Introspection\Structures\ClassObj;
-use ReflectionClass;
-
-$introspector = Introspector::getSelf();
-$introspector->init(__DIR__ . '/cache');
-
-$classObj = $introspector->getClass(MyApp\ExampleClass::class);
-$reflection = new ReflectionClass(MyApp\ExampleClass::class);
-
-// Compare metadata (example)
-if ($classObj instanceof ClassObj) {
-    echo "Class {$classObj->getName()} successfully introspected!" . PHP_EOL;
-}
-```
-
 ---
 
 ## Testing
