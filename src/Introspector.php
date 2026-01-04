@@ -228,8 +228,6 @@ class Introspector
         $obj->toSource($lines);
         $lines[] = ';';
 
-        file_put_contents(sha1($fqcn) . ".php", implode('', $lines));
-
         // Write cache atomically
         $tmpFile = $cacheFile . '.tmp';
         file_put_contents($tmpFile, implode('', $lines));

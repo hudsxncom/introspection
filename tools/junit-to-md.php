@@ -130,3 +130,5 @@ $md[] = '_Generated automatically by **Hudsxn Introspection**_';
 file_put_contents($output, implode("\n", $md));
 
 echo "✔ Markdown report generated: TESTS.md\n";
+unlink($input);
+rmdir("build");

@@ -14,8 +14,10 @@
         }
     ],
     "minimum-stability": "dev",
-    "require": {},
     "scripts": {
-        "test": "vendor\\bin\\phpunit --log-junit build\\phpunit.xml && cd tools && php junit-to-md.php"
+        "test": ".\\vendor\\bin\\phpunit --log-junit build\\phpunit.xml && cd tools && php junit-to-md.php"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^13.0@dev"
     }
 }
